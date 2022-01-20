@@ -22,9 +22,12 @@ class Ingredient:
         self.name = "expired " + self.name
 
     def __add__(self, other):
-        """Combines two ingredients."""
-        new_name = self.name + other.name
-        return Ingredient(name=new_name, amount=1)
+        """return ingredient that has the lowest amount"""
+        my_dict = {self.name:self.amount, other.name:other.amount}
+        min_amount = min(my_dict.keys(), key=my_dict.get)
+        min_value = my_dict[min_amount]
+        combine_name = self.name + other.name
+        return Ingredient(combine_name, min_value)
     
     def __str__(self):
         return f"{self.name} ({self.amount})"
