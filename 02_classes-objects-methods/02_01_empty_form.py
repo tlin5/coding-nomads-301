@@ -10,3 +10,18 @@
 #
 # Model such an application form as a Python class below, and instantiate
 # a few objects from it.
+
+
+class DocApp:
+    def __init__(self, first, last, reason):
+        self.first = first
+        self.last = last
+        self.reason = reason
+
+    def info(self):
+        return f'{self.first} {self.last} is here because of {self.reason}'
+
+i = DocApp('Bagel', 'Legal', 'Flu')
+c = DocApp('Dumb', 'Dumber', 'Crazy')
+print(i.info())
+print(c.info())
