@@ -16,17 +16,17 @@ class Car:
 
     def newspeed(self):
         self.max_speed += 5
-        return self.max_speed
     
-    def detail(self):
+    def __str__(self):
         return f'This car model is {self.model} made in {self.year} and its max speed is {self.max_speed} miles per hour.'
     
 toyota = Car('Camry', 2022, 160)
-print(toyota.detail())
+print(toyota)
 toyota.newspeed()
-print(toyota.detail())
+print(toyota)
+print(toyota.max_speed)
 
 honda = Car('Accord', 2022, 180)
-print(honda.detail())
+print(honda)
 honda.newspeed()
-print(honda.detail())
+print(honda)
