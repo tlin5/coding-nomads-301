@@ -23,9 +23,7 @@ class Ingredient:
 
     def __add__(self, other):
         """return ingredient that has the lowest amount"""
-        my_dict = {self.name:self.amount, other.name:other.amount}
-        min_amount = min(my_dict.keys(), key=my_dict.get)
-        min_value = my_dict[min_amount]
+        min_value = min(self.amount, other.amount)
         combine_name = self.name + other.name
         return Ingredient(combine_name, min_value)
     
