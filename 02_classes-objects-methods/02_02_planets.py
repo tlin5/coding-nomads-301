@@ -10,14 +10,14 @@ class Planet:
     def planetcolor(self):
         return f'Plaent {self.planet} is {self.color}'
 
-    def __str__(self) -> str:
-        return f'{self.planet} - {self.color}'
+    # def __str__(self) -> str:
+    #     return f'{self.planet} - {self.color}'
     
     def __repr__(self) -> str:
         return f'planet = {self.planet} \ncolor = {self.color}'
 
 e = Planet('earth' , 'blue')
 print(e.planetcolor())
-print(str(e))
+print(e)
 print(repr(e))
 
